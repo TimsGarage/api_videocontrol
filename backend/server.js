@@ -20,9 +20,15 @@ app.get('/events', (req, res) => {
     clients.push(res);
     console.log('New client connected. Total clients:', clients.length);
 
+    // Periodically send a keep-alive comment
+    const keepAliveInterval = setInterval(() => {
+        res.write(': keep-alive\n\n');
+    }, 15000); // Send every 15 seconds
+
     // Handle client disconnection
     req.on('close', () => {
         clients.splice(clients.indexOf(res), 1);
+        clearInterval(keepAliveInterval);
         console.log('Client disconnected. Total clients:', clients.length);
     });
 });
