@@ -1,7 +1,11 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const PORT = 6969;
 const clients = [];
+
+// Enable CORS for all routes or specific routes
+app.use(cors());  // Enable CORS for all origins, or you can pass specific options
 
 app.get('/events', (req, res) => {
     // Set appropriate headers for SSE
