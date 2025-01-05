@@ -13,9 +13,9 @@ let sendToServer = function(target, message) {
     });
 }
 
-document.getElementById('biemer-play').addEventListener('click', () => sendToServer("biemer", "play"));
-document.getElementById('biemer-pause').addEventListener('click', () => sendToServer("biemer", "pause"));
-document.getElementById('biemer-mute').addEventListener('click', () => sendToServer("biemer", "mute"));
+document.getElementById('beamer-play').addEventListener('click', () => sendToServer("beamer", "play"));
+document.getElementById('beamer-pause').addEventListener('click', () => sendToServer("beamer", "pause"));
+document.getElementById('beamer-mute').addEventListener('click', () => sendToServer("beamer", "mute"));
 
 document.getElementById('laptop-play').addEventListener('click', () => sendToServer("laptop", "play"));
 document.getElementById('laptop-pause').addEventListener('click', () => sendToServer("laptop", "pause"));

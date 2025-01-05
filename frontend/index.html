@@ -35,30 +35,48 @@
         }
 
         button {
-            background-color: #333;
-            color: #fff;
-            width: 100px;
+            background-color: #fff;
+            color: #333;
+            width: 80px;
             height: 50px;
             border: none;
             cursor: pointer;
+            margin-inline: auto;
             margin-top: 5px;
             border-radius: 5px;
         }
 
-        .buttons {
+        .button-group {
             display: flex;
-            justify-content: space-evenly;
         }
     </style>
 </head>
 <body>
-    <h1>Tims Controller</h1>
+    <h1>Controller</h1>
 
-    <h2>Biemer</h2>
-    <div class="buttons">
-        <button id="biemer-play">Play</button>
-        <button id="biemer-pause">Pause</button>
-        <button id="biemer-mute">Mute</button>
+    <h2>Beamer</h2>
+    <div class="category">
+        <div class="button-group">
+            <button id="beamer-rewind">Rewind</button>
+            <button id="beamer-pause">
+                <img src="icons/pause.png" alt="Pause" width="20px" height="20px">
+            </button>
+            <button id="beamer-play">
+                <img src="icons/play.png" alt="Play" width="20px" height="20px">
+            </button>
+            <button id="beamer-skip">Skip</button>
+        </div>
+        <div class="button-group">
+            <button id="beamer-volDown">Volume down</button>
+            <button id="beamer-mute">Mute</button>
+            <button id="beamer-unmute">Unmute</button>
+            <button id="beamer-volUp">Volume up</button>
+        </div>
+        <div class="button-group">
+            <button id="beamer-fullscreen">Fullscreen</button>
+            <button id="beamer-smallscreen">Smallscreen</button>
+        </div>
+
     </div>
     
     <h2>Laptop</h2>
