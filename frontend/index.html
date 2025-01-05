@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Video Controls</title>
     <style>
         * {
@@ -13,21 +12,21 @@
         }
 
         body {
-            background-color: #f4f4f4;
+            background-color: #dbdbdb;
             line-height: 1.6;
             font-size: 16px;
             color: #333;
         }
 
         h1 {
-            padding: 10px 15px;
-            font-size: 32px;
-            background-color: #333;
+            padding: 5px 15px;
+            font-size: 28px;
+            background-color: #585858;
             color: #fff;
         }
 
         h2 {
-            font-size: 24px;
+            font-size: 20px;
             padding-inline: 5px;
             margin-inline: 10px;
             margin-top: 20px;
@@ -38,7 +37,7 @@
             background-color: #fff;
             color: #333;
             width: 80px;
-            height: 50px;
+            height: 70px;
             border: none;
             cursor: pointer;
             margin-inline: auto;
@@ -46,8 +45,22 @@
             border-radius: 5px;
         }
 
+        button img {
+            width: 22px;
+            height: 22px;
+            opacity: .8;
+        }
+
         .button-group {
             display: flex;
+        }
+
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            max-width: max-content;
+            column-gap: 10px;
+            margin-inline: 10px;
         }
     </style>
 </head>
@@ -56,35 +69,80 @@
 
     <h2>Beamer</h2>
     <div class="category">
-        <div class="button-group">
-            <button id="beamer-rewind">Rewind</button>
+            <div class="button-grid">
+            <button id="beamer-rewind">
+                <img src="icons/backward.png" alt="Rewind">
+            </button>
             <button id="beamer-pause">
-                <img src="icons/pause.png" alt="Pause" width="20px" height="20px">
+                <img src="icons/pause.png" alt="Pause">
             </button>
             <button id="beamer-play">
-                <img src="icons/play.png" alt="Play" width="20px" height="20px">
+                <img src="icons/play.png" alt="Play">
             </button>
-            <button id="beamer-skip">Skip</button>
-        </div>
-        <div class="button-group">
-            <button id="beamer-volDown">Volume down</button>
-            <button id="beamer-mute">Mute</button>
-            <button id="beamer-unmute">Unmute</button>
-            <button id="beamer-volUp">Volume up</button>
-        </div>
-        <div class="button-group">
-            <button id="beamer-fullscreen">Fullscreen</button>
-            <button id="beamer-smallscreen">Smallscreen</button>
-        </div>
+            <button id="beamer-skip">
+                <img src="icons/forward.png" alt="Skip">
+            </button>
 
+            <button id="beamer-volDown">
+                <img src="icons/volDown.png" alt="Volume down">
+            </button>
+            <button id="beamer-mute">
+                <img src="icons/mute.png" alt="Mute">
+            </button>
+            <button id="beamer-unmute">
+                <img src="icons/unmute.png" alt="Unmute">
+            </button>
+            <button id="beamer-volUp">
+                <img src="icons/volUp.png" alt="Volume up">
+            </button>
+
+            <button id="beamer-fullscreen">
+                <img src="icons/fullscreen.png" alt="Fullscreen">
+            </button>
+            <button id="beamer-smallscreen">
+                <img src="icons/smallscreen.png" alt="Smallscreen">
+            </button>
+        </div>
     </div>
     
     <h2>Laptop</h2>
-    <div class="buttons">
-        <button id="laptop-play">Play</button>
-        <button id="laptop-pause">Pause</button>
-        <button id="laptop-mute">Mute</button>
+    <div class="category">
+        <div class="button-grid">
+            <button id="laptop-rewind">
+                <img src="icons/backward.png" alt="Rewind">
+            </button>
+            <button id="laptop-pause">
+                <img src="icons/pause.png" alt="Pause">
+            </button>
+            <button id="laptop-play">
+                <img src="icons/play.png" alt="Play">
+            </button>
+            <button id="laptop-skip">
+                <img src="icons/forward.png" alt="Skip">
+            </button>
+
+            <button id="laptop-volDown">
+                <img src="icons/volDown.png" alt="Volume down">
+            </button>
+            <button id="laptop-mute">
+                <img src="icons/mute.png" alt="Mute">
+            </button>
+            <button id="laptop-unmute">
+                <img src="icons/unmute.png" alt="Unmute">
+            </button>
+            <button id="laptop-volUp">
+                <img src="icons/volUp.png" alt="Volume up">
+            </button>
+
+            <button id="laptop-fullscreen">
+                <img src="icons/fullscreen.png" alt="Fullscreen">
+            </button>
+            <button id="laptop-smallscreen">
+                <img src="icons/smallscreen.png" alt="Smallscreen">
+            </button>
+        </div>
     </div>
+</div>
     
 </body>
 <script src="app.js"></script>
