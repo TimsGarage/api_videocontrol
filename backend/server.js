@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const https = require('https');
 const app = express();
 const PORT = 6969;
 const clients = [];
@@ -56,6 +57,23 @@ function broadcastEvent(target, data) {
 
     console.log(`Broadcasted command: ${data.command}, to target: ${target}`);
 }
+
+// ! EXPERIMENTAL CODE
+app.get('/test', (req, res) => {
+    const imageUrl = 'https://temp.compsci88.com/manga/One-Piece/1149-004.png';
+
+    https.get(imageUrl, (imageRes) => {
+        // Set the same content type as the remote image
+        res.setHeader('Content-Type', imageRes.headers['content-type']);
+        
+        // Pipe the image data directly to the response
+        imageRes.pipe(res);
+    }).on('error', (err) => {
+        console.error('Error fetching image:', err);
+        res.status(500).send('Error fetching image');
+    });
+});
+
 
 // Start the server and listen on the given port
 app.listen(PORT, function (err) {
