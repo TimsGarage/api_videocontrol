@@ -60,6 +60,7 @@ function broadcastEvent(target, data) {
 
 // ! EXPERIMENTAL CODE
 app.get('/test', (req, res) => {
+    console.log(req);
     const imageUrl = 'https://temp.compsci88.com/manga/One-Piece/1149-004.png';
 
     https.get(imageUrl, (imageRes) => {
